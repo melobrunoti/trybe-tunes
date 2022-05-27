@@ -9,7 +9,7 @@ export default class Header extends Component {
 
     this.state = {
       name: '',
-      loading: true,
+      loading: false,
     };
     this.user = this.user.bind(this);
   }
@@ -34,10 +34,10 @@ export default class Header extends Component {
     return (
       <header className="header" data-testid="header-component">
         <h2 className='header__user' data-testid="header-user-name">{name}</h2>
-        <div className='header__links'>
-          <Link to="/search" data-testid="link-to-search">Search</Link>
-          <Link to="/favorites" data-testid="link-to-favorites">Favorites</Link>
-          <Link to="/profile" data-testid="link-to-profile">Profile</Link>
+        <div className='header__nav'>
+          <Link to="/search" data-testid="link-to-search" className='header__nav__link'>Search</Link>
+          <Link to="/favorites" data-testid="link-to-favorites" className='header__nav__link' >Favorites</Link>
+          <Link to="/profile" data-testid="link-to-profile" className='header__nav__link' >Profile</Link>
         </div>
       </header>
     );

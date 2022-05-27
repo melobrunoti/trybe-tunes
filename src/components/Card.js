@@ -12,11 +12,11 @@ export default class Card extends Component {
     } } = this.props;
 
     return (
-      <div>
-        <img src={ artworkUrl100 } alt={ collectionName } />
+      <div className='card'>
+        <img className='card__img' src={ artworkUrl100 } alt={ collectionName } />
         <div>{ collectionName }</div>
         <div>{ artistName }</div>
-        <Link
+        <Link className='card__link'
           to={ `album/${collectionId}` }
           data-testid={ `link-to-album-${collectionId}` }
         >

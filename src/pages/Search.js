@@ -63,29 +63,41 @@ export default class Search extends Component {
       <div data-testid="page-search">
         <Header />
 
-        <input
-          data-testid="search-artist-input"
-          type="text"
-          value={ searchInput }
-          onChange={ this.handleChange }
-        />
+        <div className='search'>
+          <div className='search-container'> 
+          <input
+            className='search__input'
+            data-testid="search-artist-input"
+            type="text"
+            value={ searchInput }
+            onChange={ this.handleChange }
+          />
 
-        <button
-          data-testid="search-artist-button"
-          type="button"
-          disabled={ searchInput.length < minLength }
-          onClick={ this.onSearch }
-        >
-          Search
-        </button>
+          <button
+            className='search__button'
+            data-testid="search-artist-button"
+            type="button"
+            disabled={ searchInput.length < minLength }
+            onClick={ this.onSearch }
+          >
+            Search
+          </button>
+
+          </div>
+        </div>
+ 
+
+        <div>
         {(loading) ? <Loading />
           : (
-            <h2>
+            <h2 className='results'>
               {`Resultado de álbuns de: ${search}`}
             </h2>
           )}
-        {(request) && this.renderAlbums() }
-
+          <div className='results-container' >
+             {(request) && this.renderAlbums() }
+          </div>
+        </div>
       </div>
     );
   }

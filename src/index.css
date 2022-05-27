@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
 }
 
 .login {
@@ -47,7 +48,7 @@
   --color-grey-dark-1:#333;
   --color-grey-dark-2:#777;
   --color-grey-dark-3:#999;
-  --shadow-dark: 0 2rem 8rem rgba(0, 0, 0, .3);
+  --shadow-dark: 0 2rem 2rem rgba(0, 0, 0, .3);
   --shadow-light: 0 2rem 5rem rgba(0, 0, 0, .06);
 }
 
@@ -90,7 +91,108 @@ html {
 
 .header {
   background-image: linear-gradient(to left top, var(--color-primary-light), var(--color-primary-dark));
-  height: 15rem;
+  height: 8rem;
+  position: relative;
+  display: flex;
+  border-bottom: solid 2px rgb(0, 0, 0);
+}
+.header__user {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: white;
+  font-size: 2rem;
+}
+.header__nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 1rem;
+}
+.header__nav__link {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.header__nav__link:hover {
+  color: rgb(226, 223, 223);
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 0;
+}
+.search__input {
+  width: 50rem;
+  padding: 1rem;
+}
+.search__button {
+  margin-left: 1rem;
+  background-color: var(--color-primary-dark);
+  padding: 1rem;
+  color: white;
+}
+
+.card {
+  text-align: center;
+  height: 25rem;
+  width: 20rem;
+  border: solid 1px var(--color-grey-light-4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: 2rem;
+  box-shadow: var(--shadow-dark);
+  font-size: 1.5rem;
+  overflow: hidden;
+}
+.card__link {
+  margin-top: 1rem;
+  text-decoration: none;
+  padding: 1rem;
+  background-color: var(--color-primary-dark);
+  color: white;
+}
+.card__img {
+  width: 10rem;
+  margin-bottom: 2rem;
+}
+
+.results {
+  font-size: 2rem;
+  padding: 2rem;
+  letter-spacing: 3px;
+}
+
+.results-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.album {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.song {
+  margin-top: 3rem;
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  padding: 2rem;
 }
 
 /*# sourceMappingURL=index.css.map */

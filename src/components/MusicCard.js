@@ -5,7 +5,7 @@ export default class MusicCard extends Component {
   render() {
     const { trackName, previewUrl, trackId, handleFavorite, isChecked } = this.props;
     return (
-      <div>
+      <div className='test'>
         <span>{trackName}</span>
         <audio data-testid="audio-component" src={ previewUrl } controls>
           <track kind="captions" />

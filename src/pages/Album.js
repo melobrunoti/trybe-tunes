@@ -65,10 +65,10 @@ export default class Album extends Component {
         <Header />
         {loading ? <Loading /> : null}
 
-        <div>
+        <div className='album'>
           <span data-testid="artist-name">{Object(data[0]).artistName}</span>
           <span data-testid="album-name">{Object(data[0]).collectionName}</span>
-          <div>
+          <div className='song'>
             {data.map((music) => {
               const isChecked = favoriteSongs
                 .some((song) => song.trackId === music.trackId);

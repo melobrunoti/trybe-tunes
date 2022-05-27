@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
 }
 
 .login {
