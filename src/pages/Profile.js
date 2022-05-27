@@ -30,22 +30,25 @@ export default class Profile extends Component {
   render() {
     const { loading, user } = this.state;
     return (
-      <div data-testid="page-profile">
+      <div  data-testid="page-profile">
         <Header />
-        <Link to="/profile/edit">Editar perfil</Link>
-        {(loading) ? <Loading /> : null}
-        <div>
-          <p>{user.name}</p>
-          <p>{user.email}</p>
-          <p>{user.description}</p>
-          <img
+        <div className='profile'>
+        {(loading) ? <Loading /> :  
+        <div className='profile__box'>
+        <img
+            onError={i => i.target.style.display='none'}
             data-testid="profile-image"
             src={ user.image }
             alt={ user.name }
           />
-
+          <p>{user.name}</p>
+          <p>{user.email}</p>
+          <p>{user.description}</p>
+          <Link className='edit' to="/profile/edit">Editar perfil</Link>
+         
         </div>
-
+  }
+        </div>
       </div>
     );
   }
