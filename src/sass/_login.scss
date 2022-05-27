@@ -1,0 +1,43 @@
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  text-align: center;
+  background-color: var(--color-grey-dark-1);
+  color: white;
+  padding: 10rem;
+  margin-top: -20rem;
+  border-radius: 4px;
+  box-shadow: var(--shadow-dark);
+
+  &__title {
+    font-size: 7rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    padding: 3rem;
+  }
+
+  &__input, input:focus{
+    padding: 1rem;
+    border: 0px solid;
+    outline: none;
+    width: 50rem;
+    color: var(--color-grey-dark-3);
+
+  }
+
+  &__button {
+    padding: 1rem;
+    border: none;
+    background-color: var(--color-primary-dark);
+    color: white;
+  }
+
+  &__button:disabled {
+    background-color: white;
+  }
+}
