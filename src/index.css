@@ -223,4 +223,23 @@ html {
   color: white;
 }
 
+.profile-edit {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+.profile-edit__box {
+  padding: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+.profile-edit__box label {
+  display: block;
+}
+
+.edit-input {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
 /*# sourceMappingURL=index.css.map */

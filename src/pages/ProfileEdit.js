@@ -88,11 +88,13 @@ render() {
   return (
     <div data-testid="page-profile-edit">
       <Header />
-
+      <div className='profile-edit'>
+        <div className='profile-edit__box'>
       {(loading) ? <Loading /> : null}
       <label htmlFor="image">
         Imagem
         <input
+          className='edit-input'
           data-testid="edit-input-image"
           id="image"
           name="image"
@@ -104,6 +106,7 @@ render() {
       <label htmlFor="name">
         Nome
         <input
+          className='edit-input'
           data-testid="edit-input-name"
           id="name"
           name="name"
@@ -116,6 +119,7 @@ render() {
       <label htmlFor="email">
         Email
         <input
+          className='edit-input'
           data-testid="edit-input-email"
           id="email"
           name="email"
@@ -128,6 +132,7 @@ render() {
       <label htmlFor="description">
         Description
         <textarea
+          className='edit-input'
           data-testid="edit-input-description"
           id="description"
           name="description"
@@ -138,6 +143,7 @@ render() {
       </label>
 
       <button
+        className='login__button'
         type="button"
         data-testid="edit-button-save"
         onClick={ this.saveUser }
@@ -145,6 +151,8 @@ render() {
       >
         salvar
       </button>
+        </div>
+      </div>
     </div>
 
   );
