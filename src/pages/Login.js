@@ -45,6 +45,7 @@ export default class Login extends Component {
           <h1 className='login__title'>TrybeTunes</h1>
         <input 
           className='login__input'
+          placeholder='name'
           type="text"
           data-testid="login-name-input"
           onChange={ this.handleChange }
