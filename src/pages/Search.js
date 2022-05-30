@@ -45,19 +45,26 @@ export default class Search extends Component {
   }
 
   renderAlbums() {
-    const { albums } = this.state;
+    const { albums, search } = this.state;
     return (albums.length === 0) ? <p>Nenhum álbum foi encontrado</p>
       : (
-        albums.map((album) => (
-          <Card
-            key={ album.collectionId }
-            album={ album }
-          />
-        )));
-  }
+        <>
+          <h2 className='results'>
+            {`Resultado de álbuns de: ${search}`}
+          </h2>
+          <div className='results-container'>
+            { albums.map((album) => (
+              <Card
+                key={ album.collectionId }
+                album={ album }
+              />
+            ))};
+          </div>
+        </>
+      )};
 
   render() {
-    const { searchInput, search, loading, request } = this.state;
+    const { searchInput, loading, request } = this.state;
     const minLength = 2;
     return (
       <div data-testid="page-search">
@@ -87,17 +94,15 @@ export default class Search extends Component {
         </div>
  
 
-        <div>
+
         {(loading) ? <Loading />
           : (
-            <h2 className='results'>
-              {`Resultado de álbuns de: ${search}`}
-            </h2>
-          )}
-          <div className='results-container' >
+            <>
+          <div >
              {(request) && this.renderAlbums() }
           </div>
-        </div>
+          </>
+          )}     
       </div>
     );
   }
